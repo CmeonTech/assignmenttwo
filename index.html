@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/js/bootstrap.bundle.js">
+    <style>
+      
+
+    </style>
+</head>
+<body>
+        <div class="w-25 rounded p-3 m-auto shadow">
+            <p style="text-align: center;">Find the Area of the triangle, given that Area=1/2 *bh</p>
+            <input type = "number" placeholder="Enter the Base" id="base" class="w-45">
+            <input type ="number" placeholder="Enter the height" id="height" class="w-45">
+            <button class="btn btn-danger mt-3 mr-10 w-100" onclick="Area()">Area is</button>
+            <button class="btn btn-danger mt-3 w-100" onclick="Reset()">Reset</button>
+         
+            <p id="result"></p>
+        </div>
+</body>
+</html>
+
+<script>
+    function Area(){
+
+        var bTH = document.getElementById('base').value;
+        var hTH = document.getElementById('height').value;
+        let score= document.getElementById('result').innerHTML=(1/2*bTH *hTH);
+        // score *=1/2
+        console.log(score)
+    }
+
+    function Reset(){
+        var bTH = document.getElementById('base').value = 0
+        var hTH = document.getElementById('height').value = 0
+        let score = document.getElementById('result').value= 0
+        score = 0
+    }
+    
+</script>
